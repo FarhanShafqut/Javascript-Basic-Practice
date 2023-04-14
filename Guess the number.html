@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = Math.round(Math.random() * 100)
+let chance = 0
+let ask;
+do {
+  ask = + prompt("Guess the number")
+  chance++
+  if (ask > number) {
+    console.log("Number is smaller than your guess")
+  }
+  else if (ask < number) {
+    
+      console.log("Number is bigger than your guess")
+    }
+ 
+} while (ask != number)
+console.log(`Congratulations! You guessed the number in ${chance} attempts out of 100`)
+    </script>
+</body>
+</html>
+
