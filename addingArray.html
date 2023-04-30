@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/.png" href="./img/image (3).png">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: gainsboro;
+      margin-top: 5%;
+    }
+  </style>
+</head>
+<body >
+  <div style="text-align: center;" >
+  <h1 id="arr" >The Array :</h1>
+  <div>
+    <h4>Enter The character you want to enter the array</h4>
+  <input type="text" name="Enter" id="work" value="0">
+  <button onclick="pagal()">Submit</button>
+  </div>
+  <input type="text" id="see" value="0">
+  <button onclick="sear()">Search</button>
+  <h3 id="ress" ></h1>
+  </div>
+  <script>
+    let array = ["farhan","shafqut","marsad","Ans","Abuzar","hasan"]
+    let arrays = array.join("--") 
+      let arr = document.getElementById("arr").textContent = "The Array are " + arrays 
+    function pagal (){
+      let ww = document.getElementById("work").value
+      array.push(ww)
+       arrays = array.join("--") 
+       arr = document.getElementById("arr").textContent = "The Array are " + arrays 
+    }
+    function sear (){
+      let search = document.getElementById("see").value
+        for(i=0;i<array.length ;i++){
+          let count = 0
+          count++
+          if(search == array[i] ){
+            let c = document.getElementById("ress").textContent= "The character you searched is present in line no " + (i+1)
+            break
+          }
+          else {
+            c = document.getElementById("ress").textContent= "Please Enter a valid data " 
+          }
+        }
+    }
+  </script>
+</body>
+</html>
